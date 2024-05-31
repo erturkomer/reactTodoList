@@ -1,0 +1,91 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.todo-list-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  background: #59a3c85e;
+  padding: 50px;
+}
+
+.todo-create-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 32px;
+}
+
+.todo-create-container h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.todo-create{
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.todo-create input{
+  width: 88%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-align: center;
+  color: #59a3c8;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.todo-create input:focus{
+  outline: #59a3c8;
+  border: 1px solid #59a3c8;
+}
+
+.todo-create button{
+  width: 10%;
+  border: 0;
+  background: #59a3c8;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.todo{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 2px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.todo .todo-text p{
+  font-size: 18px;
+}
+
+.todo .todo-icons{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 50px;
+}
+
+.todo .todo-icons *{
+  font-size: 20px;
+  cursor: pointer;
+}
