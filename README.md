@@ -1,3 +1,3 @@
 # React + Vite
 
-![Netlify](https://react-simple-to-do-list-project.netlify.app/)
+[![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://react-simple-to-do-list-project.netlify.app/)
