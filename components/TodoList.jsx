@@ -10,15 +10,19 @@ const TodoList = () => {
     }
 
     const removeTodo = (todoId) => {
-       setTodos([...todos.filter((todo) => todo.id !== todoId)]);
+        setTodos([...todos.filter((todo) => todo.id !== todoId)]);
+    }
+
+    const updateTodo = (newTodo) => {
+        setTodos([...todos.map((todo) => todo.id === newTodo.id? newTodo : todo)]);
     }
 
     return (
         <>
             <div className="todo-list-container">
                 <TodoCreate onCreateTodo={createTodo} />
-                {todos.map((todo) => (
-                    <Todo todo={todo} key={todo.id} onRemoveTodo={removeTodo} />
+                {todos && todos.map((todo) => (
+                    <Todo todo={todo} key={todo.id} onRemoveTodo={removeTodo} onUpdateTodo={updateTodo} />
                 ))}
             </div>
         </>
