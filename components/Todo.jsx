@@ -2,7 +2,12 @@ import React from "react";
 import { FaRegEdit } from "react-icons/fa";
 import { AiOutlineDelete } from "react-icons/ai";
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, onRemoveTodo }) => {
+
+    const removeTodo = () => {
+        onRemoveTodo(todo.id);
+    };
+    
     return (
         <>
             <div className="todo">
@@ -11,7 +16,7 @@ const Todo = ({ todo }) => {
                 </div>
                 <div className="todo-icons">
                     <FaRegEdit />
-                    <AiOutlineDelete />
+                    <AiOutlineDelete onClick={removeTodo} />
                 </div>
             </div>
         </>

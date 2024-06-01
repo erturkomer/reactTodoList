@@ -18,14 +18,14 @@ body {
 .todo-list-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: column;
   width: 60%;
   background: linear-gradient(to bottom, #59a3c832, #1100ff64);
   padding: 80px;
   border-radius: 8px;
   margin: 25px;
-  min-height: 500px;
+  min-height: 90vh;
   gap: 18px;
 }
 

@@ -9,12 +9,16 @@ const TodoList = () => {
         setTodos([...todos, newTodo]);
     }
 
+    const removeTodo = (todoId) => {
+       setTodos([...todos.filter((todo) => todo.id !== todoId)]);
+    }
+
     return (
         <>
             <div className="todo-list-container">
                 <TodoCreate onCreateTodo={createTodo} />
                 {todos.map((todo) => (
-                    <Todo todo={todo} key={todo.id} />
+                    <Todo todo={todo} key={todo.id} onRemoveTodo={removeTodo} />
                 ))}
             </div>
         </>
